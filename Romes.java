@@ -29,13 +29,20 @@ public class Romes extends Number {
         //Возможность вывести отрицательное римское число
         if (n > 0) {
             n = n - 10;
-            return convert_result_to_Romes(n,0) + "X";
+            try {
+            return convert_result_to_Romes(n, 0) + "X";
+             } catch (Exception e) {
+            System.out.print("Выбрасывается исключение меньше 1");
+            e.printStackTrace();
+            }
+            //return convert_result_to_Romes(n, 0) + "X";
         } else if (n < 0) {
             n = n + 10;
             return convert_result_to_Romes(n,0) + "X";
         }   else {
             return sign;
         }
+        return null
     }
 
     @Override
