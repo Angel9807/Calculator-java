@@ -29,21 +29,24 @@ public class Romes extends Number {
         //Возможность вывести отрицательное римское число
         if (n > 0) {
             n = n - 10;
-            try {
             return convert_result_to_Romes(n, 0) + "X";
-             } catch (Exception e) {
-            System.out.print("Выбрасывается исключение меньше 1");
-            e.printStackTrace();
-            }
-            //return convert_result_to_Romes(n, 0) + "X";
         } else if (n < 0) {
             n = n + 10;
             return convert_result_to_Romes(n,0) + "X";
         }   else {
             return sign;
         }
-        return null
     }
+    public static int getFactorial(int num) throws Exception {
+
+        if (num < 1) throw new Exception("Число меньше 1");
+            int result = 1;
+    for(int i = 1; i < 1; i++){
+
+        result*=i;
+    }
+    return result;
+}
 
     @Override
     public void sum() {
